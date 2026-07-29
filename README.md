@@ -1,86 +1,46 @@
 # Certiv Labs
 
-Practical developer tools for safer software delivery. Run focused checks
-locally or in CI—no Certiv account, network access, or telemetry required.
+<p align="center">
+  <img src="assets/social-preview.png" alt="Certiv Labs — tools and research for securing AI agents" width="100%">
+</p>
 
-Built by the team behind [Certiv](https://certiv.ai/): **AI Agent Assurance for
-Endpoints.**
+Certiv Labs is the public home for Certiv's tools, research, and field-tested
+techniques for securing AI agents at the endpoint.
 
-> **Current status:** Public preview. The tools are available for evaluation,
-> but this repository does not yet carry an open-source license or a supported
-> versioned release.
+We explore how security teams can discover agent activity, understand intent,
+enforce policy before execution, and produce evidence they can trust.
 
-## Start here
+[Website](https://certiv.ai/) ·
+[Platform](https://certiv.ai/product/) ·
+[Insights](https://certiv.ai/blog/) ·
+[Book a demo](https://certiv.ai/demo/)
 
-- **Browse the tools:** [certiv.ai/tools/](https://certiv.ai/tools/)
-- **Machine-readable catalog:** [`catalog.json`](catalog.json)
-- **About Certiv:** [certiv.ai](https://certiv.ai/)
-- **Product overview:** [AI Agent Assurance for Endpoints](https://certiv.ai/product/)
+## Focus areas
 
-The website catalog is the stable, human- and agent-readable source for
-discovery. This repository remains the source of truth for code, setup,
-limitations, and contribution guidance.
+- **Agent discovery:** Find sanctioned and shadow agents operating across
+  enterprise endpoints.
+- **Intent and tool-use visibility:** Understand what agents are attempting,
+  which tools they invoke, and what data they can reach.
+- **Pre-execution control:** Evaluate and enforce policy before risky agent
+  actions run.
+- **Agent security evaluation:** Test agent behavior against prompt injection,
+  unsafe tool use, excessive permissions, and data-exfiltration paths.
 
-## Tools
+## Open releases
 
-| Tool                                                                                 | Problem it catches                                                                                                    | Maturity      | Documentation                                |
-| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ------------- | -------------------------------------------- |
-| [`selectstar` — Go `sqlx` `SELECT *` linter](cmd/selectstar/)                        | `SELECT *` queries that can break strict scans when a schema changes before old application instances stop serving    | Internal beta | [README](cmd/selectstar/README.md)           |
-| [`integrationtestnames` — Go integration-test CI checker](cmd/integrationtestnames/) | Integration-tagged tests that CI silently skips because their names do not match the configured `go test -run` prefix | Internal beta | [README](cmd/integrationtestnames/README.md) |
+Our first public AI-security releases are in development. Each release will
+appear here with a clear use case, threat model, quick start, data-handling
+notes, maturity level, and source code.
 
-## Try the tools locally
+Follow this repository to see new projects as they are published.
 
-Requirements:
+## About Certiv
 
-- Go 1.22 or later
-- a local checkout of this repository
+[Certiv](https://certiv.ai/) provides **AI Agent Assurance for Endpoints**,
+giving organizations visibility and control over agentic activity before risky
+actions execute.
 
-Run all checks:
-
-```bash
-go test ./...
-go vet ./...
-```
-
-Run either tool directly:
-
-```bash
-go run ./cmd/selectstar --fail /path/to/go/project
-go run ./cmd/integrationtestnames /path/to/go/project
-```
-
-Both tools are local static analyzers. They do not send source code, telemetry,
-or usage data anywhere.
-
-## Why Certiv publishes these
-
-AI-assisted engineering makes small, automated safeguards more valuable. Labs
-is where Certiv shares focused tools and implementation lessons that are useful
-outside our product. Each release is problem-led, transparent about its limits,
-and usable without a Certiv account.
-
-## What belongs in Labs
-
-A Labs release should:
-
-1. solve a real problem without requiring a Certiv account;
-2. take less than ten minutes to try;
-3. state its maturity, limitations, data handling, and support level;
-4. include tests, CI, contribution guidance, and a security contact;
-5. connect a specific engineering problem to the broader work Certiv does.
-
-Small and useful beats broad and speculative.
-
-## Repository state
-
-This repository is intentionally not licensed for public reuse yet. Before the
-first supported release, Certiv must approve a license, complete intellectual
-property review, assign a maintainer, and replace the preview notices. The
-complete gate is in [PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md).
-
-## Contributing and security
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the internal development workflow.
-Please report suspected vulnerabilities using the private process in
-[SECURITY.md](SECURITY.md); do not open a public issue for security-sensitive
-findings.
+[Explore the platform](https://certiv.ai/product/) ·
+[Read our latest insights](https://certiv.ai/blog/) ·
+[Security](SECURITY.md) ·
+[Contributing](CONTRIBUTING.md)

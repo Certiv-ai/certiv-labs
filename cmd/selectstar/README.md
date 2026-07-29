@@ -4,7 +4,6 @@ Catch `SELECT *` projections passed to common Go
 [`sqlx`](https://github.com/jmoiron/sqlx) query methods before additive schema
 changes break strict scans during a rolling deployment.
 
-- **Tool page:** [certiv.ai/tools/selectstar/](https://certiv.ai/tools/selectstar/)
 - **Source:** this directory
 - **Maturity:** Internal beta
 - **Data handling:** local static analysis; no network requests or telemetry

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
   <title id="title">Certiv Labs</title>
-  <desc id="description">Practical tools for safer software delivery from the team building AI Agent Assurance for Endpoints.</desc>
+  <desc id="description">Tools and research for securing AI agents at the endpoint from Certiv Labs.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
       <stop stop-color="#071121"/>
@@ -42,9 +42,9 @@
   </g>
 
   <text x="72" y="190" fill="#3af7ad" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="5">CERTIV LABS</text>
-  <text x="72" y="285" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">Practical tools for safer</text>
-  <text x="72" y="355" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">software delivery.</text>
-  <text x="72" y="420" fill="#a9b7ca" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="450">Go static analysis · CI reliability · Local by default</text>
+  <text x="72" y="285" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">Tools and research for</text>
+  <text x="72" y="355" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">securing AI agents.</text>
+  <text x="72" y="420" fill="#a9b7ca" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="450">Endpoint visibility · Policy enforcement · Agent security</text>
 
   <line x1="72" y1="516" x2="1208" y2="516" stroke="#ffffff" stroke-opacity="0.11"/>
   <text x="72" y="568" fill="#d7e0ed" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="600">AI Agent Assurance for Endpoints</text>
