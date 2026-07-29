@@ -10,14 +10,10 @@ import (
 )
 
 type catalog struct {
-	Publisher struct {
-		PlannedToolsURL string `json:"plannedToolsUrl"`
-	} `json:"publisher"`
 	Tools []struct {
-		Slug                string `json:"slug"`
-		Documentation       string `json:"documentation"`
-		PlannedCanonicalURL string `json:"plannedCanonicalUrl"`
-		SourceURL           string `json:"sourceUrl"`
+		Slug          string `json:"slug"`
+		Documentation string `json:"documentation"`
+		SourceURL     string `json:"sourceUrl"`
 	} `json:"tools"`
 }
 
@@ -70,7 +66,7 @@ func TestMarkdownRelativeLinksResolve(t *testing.T) {
 	}
 }
 
-func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
+func TestCatalogLinksToRepositoryDocumentation(t *testing.T) {
 	root := repositoryRoot(t)
 	contents, err := os.ReadFile(filepath.Join(root, "catalog.json"))
 	if err != nil {
@@ -81,12 +77,6 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 	if err := json.Unmarshal(contents, &manifest); err != nil {
 		t.Fatalf("parse catalog: %v", err)
 	}
-	if manifest.Publisher.PlannedToolsURL != "https://certiv.ai/tools/" {
-		t.Fatalf(
-			"unexpected planned tools catalog URL: %q",
-			manifest.Publisher.PlannedToolsURL,
-		)
-	}
 	if len(manifest.Tools) < 2 {
 		t.Fatalf("catalog has %d tools, want at least 2", len(manifest.Tools))
 	}
@@ -94,15 +84,6 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 	for _, tool := range manifest.Tools {
 		if tool.Slug == "" {
 			t.Error("catalog tool has empty slug")
-		}
-		expectedCanonical := "https://certiv.ai/tools/" + tool.Slug + "/"
-		if tool.PlannedCanonicalURL != expectedCanonical {
-			t.Errorf(
-				"%s planned canonical URL = %q, want %q",
-				tool.Slug,
-				tool.PlannedCanonicalURL,
-				expectedCanonical,
-			)
 		}
 		expectedSource := "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/" + tool.Slug
 		if tool.SourceURL != expectedSource {
@@ -115,21 +96,8 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 		}
 
 		readmePath := filepath.Join(root, filepath.FromSlash(tool.Documentation))
-		readme, err := os.ReadFile(readmePath)
-		if err != nil {
+		if _, err := os.ReadFile(readmePath); err != nil {
 			t.Errorf("%s documentation cannot be read: %v", tool.Slug, err)
-			continue
-		}
-		plannedDisplayURL := strings.TrimPrefix(
-			tool.PlannedCanonicalURL,
-			"https://",
-		)
-		if !strings.Contains(string(readme), plannedDisplayURL) {
-			t.Errorf(
-				"%s documentation does not link to %s",
-				tool.Slug,
-				tool.PlannedCanonicalURL,
-			)
 		}
 	}
 }
