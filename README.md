@@ -1,6 +1,6 @@
 # Certiv Labs
 
-Focused tools from the team building runtime assurance for AI agents.
+Focused tools from the team building AI Assurance for Endpoints.
 
 > **Current status:** Public preview. The tools are available for evaluation,
 > but this repository does not yet carry an open-source license or a supported
@@ -10,7 +10,7 @@ Focused tools from the team building runtime assurance for AI agents.
 
 - **Machine-readable catalog:** [`catalog.json`](catalog.json)
 - **About Certiv:** [certiv.ai](https://certiv.ai/)
-- **Product overview:** [Runtime assurance for AI agents](https://certiv.ai/product/)
+- **Product overview:** [AI Assurance for Endpoints](https://certiv.ai/product/)
 
 For now, share or cite this GitHub repository. Dedicated pages at
 `certiv.ai/tools/` will become the stable, human- and agent-readable source for
