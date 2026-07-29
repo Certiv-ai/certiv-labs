@@ -23,10 +23,6 @@ maturity, support, and release information when the website catalog ships.
 | [`selectstar`](cmd/selectstar/)                     | `SELECT *` passed to Go `sqlx` query methods, a rollout risk when schemas change before old application instances stop serving | Internal beta | [README](cmd/selectstar/README.md)           |
 | [`integrationtestnames`](cmd/integrationtestnames/) | Integration-tagged Go tests that CI silently skips because their names do not match the configured `-run` prefix               | Internal beta | [README](cmd/integrationtestnames/README.md) |
 
-The [Certiv Python SDK on PyPI](https://pypi.org/project/certiv/) will be
-cataloged alongside Labs releases, but it is a Certiv platform integration
-rather than a standalone Labs utility.
-
 ## Try the tools locally
 
 Requirements:
