@@ -1,9 +1,10 @@
-# selectstar
+# selectstar: Go `sqlx` `SELECT *` linter
 
-Find `SELECT *` projections passed to common Go
-[`sqlx`](https://github.com/jmoiron/sqlx) query methods.
+Catch `SELECT *` projections passed to common Go
+[`sqlx`](https://github.com/jmoiron/sqlx) query methods before additive schema
+changes break strict scans during a rolling deployment.
 
-- **Planned tool page:** `certiv.ai/tools/selectstar/`
+- **Tool page:** [certiv.ai/tools/selectstar/](https://certiv.ai/tools/selectstar/)
 - **Source:** this directory
 - **Maturity:** Internal beta
 - **Data handling:** local static analysis; no network requests or telemetry
@@ -44,6 +45,12 @@ Use `--fail` in CI:
 
 ```bash
 go run ./cmd/selectstar --fail /path/to/go/project
+```
+
+Example finding:
+
+```text
+store/users.go:42: sqlx query uses `SELECT *` — list columns explicitly for rollout safety
 ```
 
 When the first supported release is cut, this README will add a versioned

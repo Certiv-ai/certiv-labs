@@ -1,6 +1,10 @@
 # Certiv Labs
 
-Focused tools from the team building AI Agent Assurance for Endpoints.
+Practical developer tools for safer software delivery. Run focused checks
+locally or in CI—no Certiv account, network access, or telemetry required.
+
+Built by the team behind [Certiv](https://certiv.ai/): **AI Agent Assurance for
+Endpoints.**
 
 > **Current status:** Public preview. The tools are available for evaluation,
 > but this repository does not yet carry an open-source license or a supported
@@ -8,20 +12,21 @@ Focused tools from the team building AI Agent Assurance for Endpoints.
 
 ## Start here
 
+- **Browse the tools:** [certiv.ai/tools/](https://certiv.ai/tools/)
 - **Machine-readable catalog:** [`catalog.json`](catalog.json)
 - **About Certiv:** [certiv.ai](https://certiv.ai/)
 - **Product overview:** [AI Agent Assurance for Endpoints](https://certiv.ai/product/)
 
-For now, share or cite this GitHub repository. Dedicated pages at
-`certiv.ai/tools/` will become the stable, human- and agent-readable source for
-maturity, support, and release information when the website catalog ships.
+The website catalog is the stable, human- and agent-readable source for
+discovery. This repository remains the source of truth for code, setup,
+limitations, and contribution guidance.
 
 ## Tools
 
-| Tool                                                | What it catches                                                                                                                | Maturity      | Documentation                                |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | -------------------------------------------- |
-| [`selectstar`](cmd/selectstar/)                     | `SELECT *` passed to Go `sqlx` query methods, a rollout risk when schemas change before old application instances stop serving | Internal beta | [README](cmd/selectstar/README.md)           |
-| [`integrationtestnames`](cmd/integrationtestnames/) | Integration-tagged Go tests that CI silently skips because their names do not match the configured `-run` prefix               | Internal beta | [README](cmd/integrationtestnames/README.md) |
+| Tool                                                                                 | Problem it catches                                                                                                    | Maturity      | Documentation                                |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ------------- | -------------------------------------------- |
+| [`selectstar` — Go `sqlx` `SELECT *` linter](cmd/selectstar/)                        | `SELECT *` queries that can break strict scans when a schema changes before old application instances stop serving    | Internal beta | [README](cmd/selectstar/README.md)           |
+| [`integrationtestnames` — Go integration-test CI checker](cmd/integrationtestnames/) | Integration-tagged tests that CI silently skips because their names do not match the configured `go test -run` prefix | Internal beta | [README](cmd/integrationtestnames/README.md) |
 
 ## Try the tools locally
 
@@ -46,6 +51,13 @@ go run ./cmd/integrationtestnames /path/to/go/project
 
 Both tools are local static analyzers. They do not send source code, telemetry,
 or usage data anywhere.
+
+## Why Certiv publishes these
+
+AI-assisted engineering makes small, automated safeguards more valuable. Labs
+is where Certiv shares focused tools and implementation lessons that are useful
+outside our product. Each release is problem-led, transparent about its limits,
+and usable without a Certiv account.
 
 ## What belongs in Labs
 

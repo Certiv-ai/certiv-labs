@@ -5,7 +5,7 @@
   "publisher": {
     "name": "Certiv",
     "url": "https://certiv.ai/",
-    "plannedToolsUrl": "https://certiv.ai/tools/"
+    "toolsUrl": "https://certiv.ai/tools/"
   },
   "repository": "https://github.com/Certiv-ai/certiv-labs",
   "tools": [
@@ -17,7 +17,7 @@
       "language": "Go",
       "command": "./cmd/selectstar",
       "documentation": "cmd/selectstar/README.md",
-      "plannedCanonicalUrl": "https://certiv.ai/tools/selectstar/",
+      "canonicalUrl": "https://certiv.ai/tools/selectstar/",
       "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/selectstar",
       "networkAccess": false,
       "telemetry": false
@@ -30,7 +30,7 @@
       "language": "Go",
       "command": "./cmd/integrationtestnames",
       "documentation": "cmd/integrationtestnames/README.md",
-      "plannedCanonicalUrl": "https://certiv.ai/tools/integrationtestnames/",
+      "canonicalUrl": "https://certiv.ai/tools/integrationtestnames/",
       "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/integrationtestnames",
       "networkAccess": false,
       "telemetry": false

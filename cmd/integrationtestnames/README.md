@@ -1,9 +1,9 @@
-# integrationtestnames
+# integrationtestnames: Go integration-test CI checker
 
-Find integration-tagged Go tests that a prefix-based CI filter would silently
-skip.
+Catch integration-tagged Go tests that a prefix-based CI filter would silently
+skip, before a false-green build hides them.
 
-- **Planned tool page:** `certiv.ai/tools/integrationtestnames/`
+- **Tool page:** [certiv.ai/tools/integrationtestnames/](https://certiv.ai/tools/integrationtestnames/)
 - **Source:** this directory
 - **Maturity:** Internal beta
 - **Data handling:** local static analysis; no network requests or telemetry
