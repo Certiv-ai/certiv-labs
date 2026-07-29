@@ -3,7 +3,7 @@
 Find `SELECT *` projections passed to common Go
 [`sqlx`](https://github.com/jmoiron/sqlx) query methods.
 
-- **Canonical tool page (staged):** [certiv.ai/tools/selectstar](https://certiv.ai/tools/selectstar/)
+- **Planned tool page:** `certiv.ai/tools/selectstar/`
 - **Source:** this directory
 - **Maturity:** Internal beta
 - **Data handling:** local static analysis; no network requests or telemetry
@@ -46,9 +46,9 @@ Use `--fail` in CI:
 go run ./cmd/selectstar --fail /path/to/go/project
 ```
 
-When the repository is publicly released, this README will add a versioned
-`go install` command. Until then, run it from this local checkout so the
-instructions remain truthful and reproducible.
+When the first supported release is cut, this README will add a versioned
+`go install` command. Until then, run it from a checkout so the instructions
+remain truthful and reproducible.
 
 ## What it detects
 

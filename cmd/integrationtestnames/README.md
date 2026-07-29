@@ -3,7 +3,7 @@
 Find integration-tagged Go tests that a prefix-based CI filter would silently
 skip.
 
-- **Canonical tool page (staged):** [certiv.ai/tools/integrationtestnames](https://certiv.ai/tools/integrationtestnames/)
+- **Planned tool page:** `certiv.ai/tools/integrationtestnames/`
 - **Source:** this directory
 - **Maturity:** Internal beta
 - **Data handling:** local static analysis; no network requests or telemetry
@@ -45,8 +45,8 @@ go run ./cmd/integrationtestnames \
   /path/to/go/project
 ```
 
-When the repository is publicly released, this README will add a versioned
-`go install` command. Until then, run it from this local checkout.
+When the first supported release is cut, this README will add a versioned
+`go install` command. Until then, run it from a checkout.
 
 ## Recommended CI pairing
 

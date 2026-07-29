@@ -11,13 +11,13 @@ import (
 
 type catalog struct {
 	Publisher struct {
-		ToolsURL string `json:"toolsUrl"`
+		PlannedToolsURL string `json:"plannedToolsUrl"`
 	} `json:"publisher"`
 	Tools []struct {
-		Slug          string `json:"slug"`
-		Documentation string `json:"documentation"`
-		CanonicalURL  string `json:"canonicalUrl"`
-		SourceURL     string `json:"sourceUrl"`
+		Slug                string `json:"slug"`
+		Documentation       string `json:"documentation"`
+		PlannedCanonicalURL string `json:"plannedCanonicalUrl"`
+		SourceURL           string `json:"sourceUrl"`
 	} `json:"tools"`
 }
 
@@ -81,8 +81,11 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 	if err := json.Unmarshal(contents, &manifest); err != nil {
 		t.Fatalf("parse catalog: %v", err)
 	}
-	if manifest.Publisher.ToolsURL != "https://certiv.ai/tools/" {
-		t.Fatalf("unexpected tools catalog URL: %q", manifest.Publisher.ToolsURL)
+	if manifest.Publisher.PlannedToolsURL != "https://certiv.ai/tools/" {
+		t.Fatalf(
+			"unexpected planned tools catalog URL: %q",
+			manifest.Publisher.PlannedToolsURL,
+		)
 	}
 	if len(manifest.Tools) < 2 {
 		t.Fatalf("catalog has %d tools, want at least 2", len(manifest.Tools))
@@ -93,11 +96,11 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 			t.Error("catalog tool has empty slug")
 		}
 		expectedCanonical := "https://certiv.ai/tools/" + tool.Slug + "/"
-		if tool.CanonicalURL != expectedCanonical {
+		if tool.PlannedCanonicalURL != expectedCanonical {
 			t.Errorf(
-				"%s canonical URL = %q, want %q",
+				"%s planned canonical URL = %q, want %q",
 				tool.Slug,
-				tool.CanonicalURL,
+				tool.PlannedCanonicalURL,
 				expectedCanonical,
 			)
 		}
@@ -117,11 +120,15 @@ func TestCatalogAndReadmesUseCanonicalLinks(t *testing.T) {
 			t.Errorf("%s documentation cannot be read: %v", tool.Slug, err)
 			continue
 		}
-		if !strings.Contains(string(readme), tool.CanonicalURL) {
+		plannedDisplayURL := strings.TrimPrefix(
+			tool.PlannedCanonicalURL,
+			"https://",
+		)
+		if !strings.Contains(string(readme), plannedDisplayURL) {
 			t.Errorf(
 				"%s documentation does not link to %s",
 				tool.Slug,
-				tool.CanonicalURL,
+				tool.PlannedCanonicalURL,
 			)
 		}
 	}

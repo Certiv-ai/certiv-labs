@@ -1,7 +1,7 @@
 # Contributing
 
-Certiv Labs is currently in internal hardening. Contributions are limited to
-the Certiv team until the repository passes the publication checklist.
+Certiv Labs is currently a public preview. Contributions are limited to the
+Certiv team until the repository passes the publication checklist.
 
 ## Development workflow
 

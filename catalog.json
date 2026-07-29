@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
   "name": "Certiv Labs",
-  "status": "internal-hardening",
+  "status": "public-preview",
   "publisher": {
     "name": "Certiv",
     "url": "https://certiv.ai/",
-    "toolsUrl": "https://certiv.ai/tools/"
+    "plannedToolsUrl": "https://certiv.ai/tools/"
   },
   "repository": "https://github.com/Certiv-ai/certiv-labs",
   "tools": [
@@ -13,11 +13,11 @@
       "name": "selectstar",
       "slug": "selectstar",
       "summary": "Find SELECT * queries passed to Go sqlx methods before schema changes cause rolling-deployment scan failures.",
-      "maturity": "internal-beta",
+      "maturity": "public-preview",
       "language": "Go",
       "command": "./cmd/selectstar",
       "documentation": "cmd/selectstar/README.md",
-      "canonicalUrl": "https://certiv.ai/tools/selectstar/",
+      "plannedCanonicalUrl": "https://certiv.ai/tools/selectstar/",
       "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/selectstar",
       "networkAccess": false,
       "telemetry": false
@@ -26,11 +26,11 @@
       "name": "Go Integration Test Name Checker",
       "slug": "integrationtestnames",
       "summary": "Find integration-tagged Go tests silently skipped by a mismatched go test -run prefix.",
-      "maturity": "internal-beta",
+      "maturity": "public-preview",
       "language": "Go",
       "command": "./cmd/integrationtestnames",
       "documentation": "cmd/integrationtestnames/README.md",
-      "canonicalUrl": "https://certiv.ai/tools/integrationtestnames/",
+      "plannedCanonicalUrl": "https://certiv.ai/tools/integrationtestnames/",
       "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/integrationtestnames",
       "networkAccess": false,
       "telemetry": false
