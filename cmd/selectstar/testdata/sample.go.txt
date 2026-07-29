@@ -1,0 +1,49 @@
+// This .go.txt file contains intentional findings for selectstar's tests.
+package sample
+
+import (
+	"context"
+	"fmt"
+)
+
+type db struct{}
+
+func (db) GetContext(context.Context, any, string, ...any) error { return nil }
+func (db) SelectContext(context.Context, any, string, ...any) error {
+	return nil
+}
+
+type cache struct{}
+
+func (cache) Get(string) string { return "" }
+
+func examples(ctx context.Context, database db, localCache cache) {
+	var destination any
+
+	_ = database.GetContext(ctx, &destination, "SELECT * FROM users WHERE id = $1", 1)
+
+	query := "SELECT * FROM agents WHERE id = $1"
+	_ = database.GetContext(ctx, &destination, query, 1)
+
+	base := "SELECT * "
+	_ = database.SelectContext(ctx, &destination, base+"FROM tools", nil)
+
+	_ = database.SelectContext(ctx, &destination, fmt.Sprintf("SELECT * FROM t WHERE org = %s", "x"), nil)
+
+	_ = database.SelectContext(ctx, &destination, "SELECT id FROM (SELECT * FROM foo) sub", nil)
+
+	_ = database.GetContext(ctx, &destination, "SELECT id, name FROM users WHERE id = $1", 1)
+	_ = localCache.Get("user:123")
+	_ = map[string]string{"sql": "SELECT * FROM fixtures"}
+
+	_ = database.GetContext(ctx, &destination, "SELECT * FROM allowed_inline", 1) //selectstar:allow reviewed exception
+
+	//selectstar:allow CTE columns are explicit
+	allowed := `
+		WITH x AS (SELECT a, b FROM t)
+		SELECT * FROM x
+	`
+	_ = database.SelectContext(ctx, &destination, allowed, nil)
+
+	_ = database.GetContext(ctx, &destination, "SELECT count(*) FROM users", nil)
+}
