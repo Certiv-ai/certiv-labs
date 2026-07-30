@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+  <title id="title">Claude Pool</title>
+  <desc id="description">A Certiv Labs project card showing multiple local accounts routed through a pool to a terminal session.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071121"/>
+      <stop offset="0.62" stop-color="#0A172B"/>
+      <stop offset="1" stop-color="#071121"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(790 90) rotate(137) scale(520 360)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#009CFE" stop-opacity="0.25"/>
+      <stop offset="0.55" stop-color="#16BFDE" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071121" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0058FF"/>
+      <stop offset="0.48" stop-color="#06A5F5"/>
+      <stop offset="1" stop-color="#3AF7AD"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/>
+    </pattern>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" rx="28" fill="url(#background)"/>
+  <rect width="960" height="540" rx="28" fill="url(#glow)"/>
+  <rect x="510" width="450" height="540" fill="url(#grid)"/>
+  <rect x="1" y="1" width="958" height="538" rx="27" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <g transform="translate(54 48)">
+    <rect width="46" height="46" rx="13" fill="url(#brand)"/>
+    <path d="M23 9C23.6 17.3 28.7 22.4 37 23C28.7 23.6 23.6 28.7 23 37C22.4 28.7 17.3 23.6 9 23C17.3 22.4 22.4 17.3 23 9Z" fill="#071121"/>
+    <text x="62" y="31" fill="#DDE7F3" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">CERTIV LABS</text>
+  </g>
+
+  <text x="54" y="176" fill="#3AF7AD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">EXPERIMENTAL TOOL</text>
+  <text x="54" y="250" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="750" letter-spacing="-2">Claude Pool</text>
+  <text x="54" y="298" fill="#A9B7CA" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500">Local session routing for Claude Code</text>
+
+  <g transform="translate(54 386)">
+    <rect width="104" height="40" rx="20" fill="#0D2740" stroke="#1E537D"/>
+    <text x="52" y="26" fill="#CBE8FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="middle">macOS</text>
+    <rect x="116" width="124" height="40" rx="20" fill="#0D2F2B" stroke="#1D6657"/>
+    <text x="178" y="26" fill="#C8F9E8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="middle">Local-first</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M620 176C680 176 688 232 728 250" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M620 270H728" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M620 364C680 364 688 308 728 290" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
+
+    <g>
+      <circle cx="590" cy="176" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
+      <circle cx="590" cy="176" r="12" fill="#35B7E8"/>
+      <text x="590" y="228" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT A</text>
+    </g>
+    <g>
+      <circle cx="590" cy="270" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
+      <circle cx="590" cy="270" r="12" fill="#35B7E8"/>
+      <text x="590" y="322" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT B</text>
+    </g>
+    <g>
+      <circle cx="590" cy="364" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
+      <circle cx="590" cy="364" r="12" fill="#35B7E8"/>
+      <text x="590" y="416" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT C</text>
+    </g>
+
+    <circle cx="754" cy="270" r="58" fill="#0C322D" stroke="#36D8A4" stroke-width="3"/>
+    <path d="M754 235C755 255 766 268 788 270C766 272 755 285 754 305C753 285 742 272 720 270C742 268 753 255 754 235Z" fill="#3AF7AD"/>
+    <text x="754" y="346" fill="#A4DCC9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">POOL</text>
+
+    <path d="M812 270H842" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round"/>
+    <path d="M834 261L844 270L834 279" fill="none" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="842" y="221" width="76" height="98" rx="13" fill="#0D1D32" stroke="#59718D" stroke-width="2"/>
+    <rect x="856" y="239" width="48" height="62" rx="5" fill="#07111F"/>
+    <path d="M866 256L875 264L866 272" fill="none" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M882 274H894" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round"/>
+    <text x="880" y="346" fill="#A4B3C8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">SESSION</text>
+  </g>
+
+  <line x1="54" y1="474" x2="906" y2="474" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="54" y="510" fill="#D7E0ED" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">AI Agent Assurance for Endpoints</text>
+  <text x="906" y="510" fill="#7F91AA" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="end">github.com/Certiv-ai/certiv-labs</text>
+</svg>

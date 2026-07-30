@@ -24,6 +24,8 @@ Run these before committing:
 gofmt -w ./cmd
 go test ./...
 go vet ./...
+(cd tools/claude-pool && python3 -m unittest discover -s tests -v)
+(cd tools/claude-pool && python3 scripts/build_release.py)
 ```
 
 README links should be relative for files inside this repository. Public-facing

@@ -77,15 +77,19 @@ func TestCatalogLinksToRepositoryDocumentation(t *testing.T) {
 	if err := json.Unmarshal(contents, &manifest); err != nil {
 		t.Fatalf("parse catalog: %v", err)
 	}
-	if len(manifest.Tools) < 2 {
-		t.Fatalf("catalog has %d tools, want at least 2", len(manifest.Tools))
+	if len(manifest.Tools) < 1 {
+		t.Fatal("catalog has no public projects")
 	}
 
 	for _, tool := range manifest.Tools {
 		if tool.Slug == "" {
 			t.Error("catalog tool has empty slug")
 		}
-		expectedSource := "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/" + tool.Slug
+		documentationDirectory := strings.TrimSuffix(
+			tool.Documentation,
+			"/README.md",
+		)
+		expectedSource := "https://github.com/Certiv-ai/certiv-labs/tree/main/" + documentationDirectory
 		if tool.SourceURL != expectedSource {
 			t.Errorf(
 				"%s source URL = %q, want %q",
@@ -108,6 +112,7 @@ func TestPublicReadmesContainNoInternalReferences(t *testing.T) {
 		"README.md",
 		"cmd/selectstar/README.md",
 		"cmd/integrationtestnames/README.md",
+		"tools/claude-pool/README.md",
 	}
 	for _, relativePath := range readmes {
 		contents, err := os.ReadFile(filepath.Join(root, relativePath))

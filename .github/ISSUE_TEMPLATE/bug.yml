@@ -11,6 +11,7 @@ body:
       options:
         - selectstar
         - integrationtestnames
+        - claude-pool
         - Repository documentation or automation
     validations:
       required: true
@@ -37,10 +38,11 @@ body:
     validations:
       required: true
   - type: input
-    id: go
+    id: runtime
     attributes:
-      label: Go version
-      placeholder: Output of go version
+      label: Runtime version
+      description: Include the relevant Go or Python version.
+      placeholder: Output of go version or python3 --version
     validations:
       required: true
   - type: checkboxes

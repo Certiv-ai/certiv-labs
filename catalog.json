@@ -9,27 +9,19 @@
   "repository": "https://github.com/Certiv-ai/certiv-labs",
   "tools": [
     {
-      "name": "selectstar",
-      "slug": "selectstar",
-      "summary": "Find SELECT * queries passed to Go sqlx methods before schema changes cause rolling-deployment scan failures.",
-      "maturity": "public-preview",
-      "language": "Go",
-      "command": "./cmd/selectstar",
-      "documentation": "cmd/selectstar/README.md",
-      "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/selectstar",
-      "networkAccess": false,
-      "telemetry": false
-    },
-    {
-      "name": "Go Integration Test Name Checker",
-      "slug": "integrationtestnames",
-      "summary": "Find integration-tagged Go tests silently skipped by a mismatched go test -run prefix.",
-      "maturity": "public-preview",
-      "language": "Go",
-      "command": "./cmd/integrationtestnames",
-      "documentation": "cmd/integrationtestnames/README.md",
-      "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/cmd/integrationtestnames",
-      "networkAccess": false,
+      "name": "Claude Pool",
+      "slug": "claude-pool",
+      "summary": "Keep local Claude Code work moving by balancing new terminal and Desktop sessions across multiple subscription accounts owned by one person.",
+      "maturity": "experimental",
+      "language": "Python",
+      "command": "./tools/claude-pool/claude-pool",
+      "documentation": "tools/claude-pool/README.md",
+      "sourceUrl": "https://github.com/Certiv-ai/certiv-labs/tree/main/tools/claude-pool",
+      "platforms": [
+        "macOS"
+      ],
+      "networkAccess": true,
+      "networkAccessNote": "The wrapper sends nothing to Certiv. It launches the official Claude Code worker, which communicates with Anthropic.",
       "telemetry": false
     }
   ]
