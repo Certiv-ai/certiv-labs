@@ -19,26 +19,11 @@ execution, and produce evidence they can trust.
 
 ## Project catalog
 
-<table>
-  <tr>
-    <td width="42%">
-      <a href="tools/claude-pool/">
-        <img src="assets/projects/claude-pool.png" alt="Claude Pool — local session routing for Claude Code" width="100%">
-      </a>
-    </td>
-    <td width="58%">
-      <h3><a href="tools/claude-pool/">Claude Pool</a></h3>
-      <p><strong>Keep local Claude Code sessions moving across multiple subscriptions you own.</strong></p>
-      <p>A local macOS launcher that assigns new terminal and Claude Desktop Code sessions to the account with the most available capacity, preserves session affinity, and can resume terminal work after a usage-window limit.</p>
-      <p><code>Experimental</code> · <code>macOS</code> · <code>Local-first</code> · <code>No Certiv telemetry</code></p>
-      <p>
-        <a href="tools/claude-pool/"><strong>Explore project →</strong></a> ·
-        <a href="tools/claude-pool/#quick-start">Quick start</a> ·
-        <a href="tools/claude-pool/#security-and-local-files">Security</a>
-      </p>
-    </td>
-  </tr>
-</table>
+[![Claude Pool — a local macOS launcher that routes Claude Code terminal and Desktop sessions across multiple subscriptions you own](assets/projects/claude-pool.png)](tools/claude-pool/)
+
+[**Explore Claude Pool →**](tools/claude-pool/) ·
+[Quick start](tools/claude-pool/#quick-start) ·
+[Security and data handling](tools/claude-pool/#security-and-local-files)
 
 ## Focus areas
 
