@@ -15,6 +15,8 @@ Certiv team until the repository passes the publication checklist.
    gofmt -w ./cmd
    go test ./...
    go vet ./...
+   (cd tools/claude-pool && python3 -m unittest discover -s tests -v)
+   (cd tools/claude-pool && python3 scripts/build_release.py)
    ```
 
 5. Include before-and-after examples for user-visible behavior.
@@ -31,8 +33,10 @@ Certiv team until the repository passes the publication checklist.
   exceptions.
 - Avoid Certiv-specific paths and configuration in reusable tools.
 
-## Public contributions
+## License and public contributions
 
-Before public contributions are enabled, this file will be updated with the
-approved license, contributor expectations, issue workflow, and maintainer
-response targets.
+Certiv Labs is licensed under the
+[Apache License 2.0](LICENSE.md). Unless explicitly stated otherwise, an
+intentional contribution submitted for inclusion is provided under that same
+license. Public contributions remain limited during preview while maintainer
+ownership and response targets are finalized.

@@ -7,7 +7,7 @@ is complete.
 
 - [ ] A Certiv maintainer owns releases and issue response.
 - [ ] Certiv has approved the repository and tool names.
-- [ ] An approved open-source license replaces `LICENSE.md`.
+- [x] Apache-2.0 replaces the source-visible preview notice.
 - [ ] Intellectual-property and third-party-code review is complete.
 - [ ] Git history and current files pass a secret scan.
 
@@ -16,6 +16,7 @@ is complete.
 - [ ] The advertised happy path works without a Certiv account.
 - [ ] Network access, telemetry, and data handling are documented.
 - [ ] Threat and abuse review is complete.
+- [ ] Third-party service terms and branding review is complete for integrations.
 - [ ] Dependencies and release artifacts are scanned.
 - [ ] `SECURITY.md` contains a working private reporting route.
 

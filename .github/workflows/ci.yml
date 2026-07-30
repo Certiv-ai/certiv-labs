@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  go:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,3 +30,31 @@ jobs:
 
       - name: Run go vet
         run: go vet ./...
+
+  claude-pool:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: tools/claude-pool
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      - name: Compile Python sources
+        run: python3 -m compileall -q claude_pool scripts tests
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Build release archives
+        run: python3 scripts/build_release.py
+
+      - name: Verify release contents
+        run: |
+          unzip -l dist/claude-pool-*.zip | grep 'LICENSE'
+          unzip -l dist/claude-pool-*.zip | grep 'NOTICE'

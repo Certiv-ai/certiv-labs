@@ -19,6 +19,13 @@ approved private GitHub security-advisory or security-email process.
 
 ## Data handling
 
-The current tools perform local static analysis. They do not make network
-requests, upload source code, or emit telemetry. A change to that property
-requires an explicit security review and prominent README disclosure.
+`selectstar` and `integrationtestnames` perform local static analysis. They do
+not make network requests, upload source code, or emit telemetry.
+
+Claude Pool stores subscription OAuth tokens in macOS Keychain and local
+account metadata in user-private files. It launches the official Claude Code
+worker, which communicates with Anthropic under the user's account. Claude Pool
+does not send data to Certiv, and it does not store prompts or responses.
+
+Any change to these properties requires an explicit security review and
+prominent README disclosure.
