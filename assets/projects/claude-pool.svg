@@ -1,87 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title description">
   <title id="title">Claude Pool</title>
-  <desc id="description">A Certiv Labs project card showing multiple local accounts routed through a pool to a terminal session.</desc>
+  <desc id="description">A Certiv Labs project card for Claude Pool, a local macOS launcher that routes Claude Code terminal and Desktop sessions across multiple subscriptions owned by one person.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071121"/>
-      <stop offset="0.62" stop-color="#0A172B"/>
-      <stop offset="1" stop-color="#071121"/>
+    <linearGradient id="official-mark" x1="38.9" y1="123.75" x2="102.49" y2="78.42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0058ff"/>
+      <stop offset=".03" stop-color="#005dfe"/>
+      <stop offset=".28" stop-color="#008afe"/>
+      <stop offset=".41" stop-color="#009cfe"/>
+      <stop offset=".52" stop-color="#06a5f5"/>
+      <stop offset=".7" stop-color="#16bfde"/>
+      <stop offset=".93" stop-color="#31e9b9"/>
+      <stop offset="1" stop-color="#3af7ad"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(790 90) rotate(137) scale(520 360)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#009CFE" stop-opacity="0.25"/>
-      <stop offset="0.55" stop-color="#16BFDE" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#071121" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#0058FF"/>
-      <stop offset="0.48" stop-color="#06A5F5"/>
-      <stop offset="1" stop-color="#3AF7AD"/>
-    </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/>
-    </pattern>
-    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/>
-    </filter>
   </defs>
 
-  <rect width="960" height="540" rx="28" fill="url(#background)"/>
-  <rect width="960" height="540" rx="28" fill="url(#glow)"/>
-  <rect x="510" width="450" height="540" fill="url(#grid)"/>
-  <rect x="1" y="1" width="958" height="538" rx="27" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect width="1280" height="500" rx="24" fill="#071121"/>
+  <rect x="1" y="1" width="1278" height="498" rx="23" fill="none" stroke="#25334A"/>
+  <rect x="0" y="0" width="8" height="500" rx="4" fill="#16BFDE"/>
 
-  <g transform="translate(54 48)">
-    <rect width="46" height="46" rx="13" fill="url(#brand)"/>
-    <path d="M23 9C23.6 17.3 28.7 22.4 37 23C28.7 23.6 23.6 28.7 23 37C22.4 28.7 17.3 23.6 9 23C17.3 22.4 22.4 17.3 23 9Z" fill="#071121"/>
-    <text x="62" y="31" fill="#DDE7F3" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">CERTIV LABS</text>
-  </g>
-
-  <text x="54" y="176" fill="#3AF7AD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">EXPERIMENTAL TOOL</text>
-  <text x="54" y="250" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="750" letter-spacing="-2">Claude Pool</text>
-  <text x="54" y="298" fill="#A9B7CA" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500">Local session routing for Claude Code</text>
-
-  <g transform="translate(54 386)">
-    <rect width="104" height="40" rx="20" fill="#0D2740" stroke="#1E537D"/>
-    <text x="52" y="26" fill="#CBE8FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="middle">macOS</text>
-    <rect x="116" width="124" height="40" rx="20" fill="#0D2F2B" stroke="#1D6657"/>
-    <text x="178" y="26" fill="#C8F9E8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="middle">Local-first</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <path d="M620 176C680 176 688 232 728 250" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
-    <path d="M620 270H728" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
-    <path d="M620 364C680 364 688 308 728 290" fill="none" stroke="#239ED7" stroke-width="3" stroke-linecap="round"/>
-
-    <g>
-      <circle cx="590" cy="176" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
-      <circle cx="590" cy="176" r="12" fill="#35B7E8"/>
-      <text x="590" y="228" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT A</text>
+  <!-- Official Certiv logo artwork from certiv.ai brand assets. -->
+  <g transform="translate(34 8) scale(0.7)">
+    <g fill="#FFFFFF">
+      <path d="M172.04,117.28v-35.39h36.27v7.01h-27.36v6.96h24.16v6.9h-24.16v7.47h27.77v7.06h-36.68Z"/>
+      <path d="M216.6,117.28v-35.39h28.59c2.54,0,4.63.52,6.26,1.55,1.63,1.03,2.86,2.39,3.68,4.07.82,1.68,1.24,3.55,1.24,5.62s-.54,4.11-1.62,5.95c-1.08,1.84-2.72,3.29-4.92,4.35l7.37,13.86h-9.99l-6.23-12.26h-15.46v12.26h-8.91ZM225.51,98.02h17.05c1.44,0,2.58-.44,3.43-1.31.84-.88,1.26-2,1.26-3.37,0-.96-.19-1.77-.57-2.42-.38-.65-.91-1.15-1.6-1.49-.69-.34-1.53-.52-2.52-.52h-17.05v9.12Z"/>
+      <path d="M275.89,117.28v-27.87h-15.61v-7.52h40.03v7.52h-15.56v27.87h-8.86Z"/>
+      <path d="M306.39,117.28v-35.39h8.91v35.39h-8.91Z"/>
+      <path d="M337.82,117.28l-16.95-35.39h9.89l8.65,18.85c.38.79.76,1.67,1.16,2.65.39.98.79,1.93,1.19,2.86.39.93.71,1.73.95,2.42h.41c.24-.62.54-1.38.9-2.29.36-.91.75-1.85,1.18-2.83.43-.98.83-1.9,1.21-2.76l8.71-18.91h9.43l-16.95,35.39h-9.79Z"/>
+      <path d="M139.35,88.9h24.81v-7.01h-28.3c-5.2,0-9.62,3.73-10.58,8.84-.53,2.84-.81,5.8-.81,8.85s.28,6.02.81,8.85c.95,5.11,5.38,8.84,10.58,8.84h28.3v-7.01h-24.7c-2.09,0-3.92-1.45-4.36-3.49-.51-2.37-.78-4.88-.78-7.48,0-2.36.23-4.64.65-6.81.41-2.09,2.25-3.6,4.38-3.6Z"/>
     </g>
-    <g>
-      <circle cx="590" cy="270" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
-      <circle cx="590" cy="270" r="12" fill="#35B7E8"/>
-      <text x="590" y="322" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT B</text>
-    </g>
-    <g>
-      <circle cx="590" cy="364" r="38" fill="#0D2943" stroke="#2A8CC6" stroke-width="2"/>
-      <circle cx="590" cy="364" r="12" fill="#35B7E8"/>
-      <text x="590" y="416" fill="#86A7C4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650" text-anchor="middle">ACCOUNT C</text>
-    </g>
-
-    <circle cx="754" cy="270" r="58" fill="#0C322D" stroke="#36D8A4" stroke-width="3"/>
-    <path d="M754 235C755 255 766 268 788 270C766 272 755 285 754 305C753 285 742 272 720 270C742 268 753 255 754 235Z" fill="#3AF7AD"/>
-    <text x="754" y="346" fill="#A4DCC9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">POOL</text>
-
-    <path d="M812 270H842" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round"/>
-    <path d="M834 261L844 270L834 279" fill="none" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="842" y="221" width="76" height="98" rx="13" fill="#0D1D32" stroke="#59718D" stroke-width="2"/>
-    <rect x="856" y="239" width="48" height="62" rx="5" fill="#07111F"/>
-    <path d="M866 256L875 264L866 272" fill="none" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M882 274H894" stroke="#3AF7AD" stroke-width="3" stroke-linecap="round"/>
-    <text x="880" y="346" fill="#A4B3C8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">SESSION</text>
+    <path fill="url(#official-mark)" d="M109.07,102.08h-15.87c-14.13.15-17.68,2.69-18.14,15.67-.04,1.19-1.01,2.15-2.2,2.16-1.21.01-2.21-.95-2.25-2.16-.46-13-4-15.85-18.1-16.01h-.17c-1.2,0-2.18-.97-2.18-2.18s.97-2.18,2.18-2.18h.13c14.13-.15,17.68-2.99,18.14-16.01.04-1.19,1.01-2.15,2.2-2.16,1.21-.01,2.21.95,2.25,2.16.46,12.99,4.01,15.52,18.14,15.67h15.87c.47,0,.86-.4.83-.87-.23-4.37-.89-8.59-1.93-12.58-1.07-4.1-3.43-7.45-7.67-7.45h-54.96c-4.16,0-6.55,3.26-7.62,7.27-1.34,5.05-2.07,10.48-2.07,16.13s.7,10.86,1.98,15.82c1.08,4.16,3.4,7.59,7.7,7.59h54.95c4.24,0,6.6-3.35,7.67-7.45s1.7-8.2,1.93-12.58c.02-.47-.36-.87-.83-.87Z"/>
   </g>
+  <text x="300" y="84" fill="#8FA0B7" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">LABS</text>
 
-  <line x1="54" y1="474" x2="906" y2="474" stroke="#FFFFFF" stroke-opacity="0.1"/>
-  <text x="54" y="510" fill="#D7E0ED" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">AI Agent Assurance for Endpoints</text>
-  <text x="906" y="510" fill="#7F91AA" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="end">github.com/Certiv-ai/certiv-labs</text>
+  <text x="56" y="156" fill="#3AF7AD" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">PROJECT 001 · EXPERIMENTAL</text>
+  <text x="56" y="226" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-1">Claude Pool</text>
+  <text x="56" y="274" fill="#D4DDE9" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600">Keep local Claude Code sessions moving.</text>
+  <text x="56" y="322" fill="#93A3B8" font-family="Inter, Arial, sans-serif" font-size="20">Routes new terminal and local Desktop sessions across multiple</text>
+  <text x="56" y="351" fill="#93A3B8" font-family="Inter, Arial, sans-serif" font-size="20">subscriptions you own. Local credentials. No Certiv telemetry.</text>
+
+  <g transform="translate(56 392)">
+    <rect width="92" height="34" rx="17" fill="#10233A" stroke="#315273"/>
+    <text x="46" y="22" fill="#C8D7E8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">macOS</text>
+    <rect x="104" width="110" height="34" rx="17" fill="#102A27" stroke="#2A6557"/>
+    <text x="159" y="22" fill="#C9F1E4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Local-first</text>
+  </g>
+  <text x="56" y="468" fill="#3AF7AD" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1">OPEN PROJECT →</text>
+
+  <g>
+    <rect x="814" y="70" width="410" height="360" rx="16" fill="#0B1728" stroke="#30415A"/>
+    <rect x="814" y="70" width="410" height="48" rx="16" fill="#101F33"/>
+    <path d="M814 102H1224" stroke="#30415A"/>
+    <circle cx="840" cy="94" r="6" fill="#EC6A5F"/>
+    <circle cx="862" cy="94" r="6" fill="#F4BF4F"/>
+    <circle cx="884" cy="94" r="6" fill="#61C454"/>
+    <text x="1019" y="99" fill="#8FA0B7" font-family="SFMono-Regular, Consolas, monospace" font-size="14" text-anchor="middle">claude-pool status</text>
+
+    <text x="846" y="158" fill="#7F91AA" font-family="SFMono-Regular, Consolas, monospace" font-size="14">ACCOUNT</text>
+    <text x="1128" y="158" fill="#7F91AA" font-family="SFMono-Regular, Consolas, monospace" font-size="14">STATE</text>
+
+    <circle cx="850" cy="198" r="6" fill="#009CFE"/>
+    <text x="870" y="204" fill="#D7E0ED" font-family="SFMono-Regular, Consolas, monospace" font-size="17">personal</text>
+    <text x="1128" y="204" fill="#9EADC0" font-family="SFMono-Regular, Consolas, monospace" font-size="15">active</text>
+
+    <circle cx="850" cy="248" r="6" fill="#3AF7AD"/>
+    <text x="870" y="254" fill="#D7E0ED" font-family="SFMono-Regular, Consolas, monospace" font-size="17">work</text>
+    <text x="1128" y="254" fill="#3AF7AD" font-family="SFMono-Regular, Consolas, monospace" font-size="15">ready</text>
+
+    <circle cx="850" cy="298" r="6" fill="#16BFDE"/>
+    <text x="870" y="304" fill="#D7E0ED" font-family="SFMono-Regular, Consolas, monospace" font-size="17">research</text>
+    <text x="1128" y="304" fill="#9EADC0" font-family="SFMono-Regular, Consolas, monospace" font-size="15">ready</text>
+
+    <path d="M846 338H1192" stroke="#30415A"/>
+    <text x="846" y="382" fill="#7F91AA" font-family="SFMono-Regular, Consolas, monospace" font-size="15">next session</text>
+    <text x="994" y="382" fill="#3AF7AD" font-family="SFMono-Regular, Consolas, monospace" font-size="15">→ work</text>
+  </g>
 </svg>
